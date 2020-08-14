@@ -23,8 +23,9 @@
 
 <style>
 .NuxtLogo {
+  @apply m-auto;
+
   animation: 1s appear;
-  margin: auto;
 }
 
 @keyframes appear {
