@@ -10,8 +10,9 @@
           href="https://nuxtjs.org/"
           target="_blank"
           rel="noopener noreferrer"
-          class="button--green"
+          class="button--green text-red-500"
         >
+          <span class="sr-only">Should be hidden</span>
           Documentation
         </a>
         <a
@@ -33,19 +34,9 @@ import Vue from 'vue'
 export default Vue.extend({})
 </script>
 
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
+<style lang="postcss">
 .container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 
 .title {

@@ -1,14 +1,17 @@
-export default {
+import type { NuxtConfig } from '@nuxt/types'
+
+const config: NuxtConfig = {
   /*
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
    */
-  mode: 'spa',
+  mode: process.env.NODE_ENV === 'development' ? 'universal' : 'spa',
   /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
    */
   target: 'static',
+  modern: 'client',
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
@@ -60,3 +63,5 @@ export default {
    */
   build: {},
 }
+
+export default config
